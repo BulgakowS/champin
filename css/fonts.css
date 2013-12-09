@@ -1,0 +1,114 @@
+
+@font-face {
+    font-family: Intro-Black-Alt;
+    src: url("fonts/Intro-Black-Alt.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Black-Caps;
+    src: url("fonts/Intro-Black-Caps.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Black-Inline-Caps;
+    src: url("fonts/Intro-Black-Inline-Caps.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Black-Inline;
+    src: url("fonts/Intro-Black-Inline.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Black-Italic;
+    font-style: italic;
+    src: url("fonts/Intro-Black-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Black;
+    src: url("fonts/Intro-Black.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Bold-Alt;
+    font-weight: bold;
+    src: url("fonts/Intro-Bold-Alt.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Bold-Caps;
+    font-weight: bold;
+    src: url("fonts/Intro-Bold-Caps.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Bold-Italic;
+    font-style: italic;
+    src: url("fonts/Intro-Bold-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Bold;
+    font-weight: bold;
+    src: url("fonts/Intro-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Book-Alt;
+    src: url("fonts/Intro-Book-Alt.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Book-Caps;
+    src: url("fonts/Intro-Book-Caps.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Book-Italic;
+    font-style: italic;
+    src: url("fonts/Intro-Book-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Book;
+    src: url("fonts/Intro-Book.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Light-Alt;
+    src: url("fonts/Intro-Light-Alt.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Light-Caps;
+    src: url("fonts/Intro-Light-Caps.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Light-Italic;
+    font-style: italic;
+    src: url("fonts/Intro-Light-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Light;
+    src: url("fonts/Intro-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Regular-Alt;
+    src: url("fonts/Intro-Regular-Alt.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Regular-Caps;
+    src: url("fonts/Intro-Regular-Caps.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Regular-Italic;
+    font-style: italic;
+    src: url("fonts/Intro-Regular-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Regular;
+    src: url("fonts/Intro-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Thin-Alt;
+    src: url("fonts/Intro-Thin-Alt.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Thin-Caps;
+    src: url("fonts/Intro-Thin-Caps.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Thin-Italic;
+    font-style: italic;
+    src: url("fonts/Intro-Thin-Italic.otf") format("opentype");
+}
+@font-face {
+    font-family: Intro-Thin;
+    src: url("fonts/Intro-Thin.otf") format("opentype");
+}
