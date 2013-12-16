@@ -25,27 +25,41 @@ $(document).ready(function() {
         window.scrollTo(0,2000);
         $('#tarif-form-tarif').val($(this).attr('data-tarif'));
         $('#tarif-form').fadeIn();
+        $('#tarif-form').click(function(e){
+            if ( e.target.nodeName != 'INPUT' && 
+                    e.target.nodeName != 'H2' && 
+                    e.target.nodeName != 'P') 
+            {
+                $(this).fadeOut();
+            }       
+        });
     });
     
-//    $('#portfolio').easyab({
-//        'slot': 1,
-//        'name': 'portfolio-show',
-//        'default-value': 'block',
-//        'alternatives': [{
-//            'value': 'none',
-//            'alternative': function($this) {
-//                $('#portfolio').hide();
-//                $('#menu-portfolio').parents('li').hide();
-//                portfolioShowed = false;
-//            }},
-//            {'value': 'block',
-//             'alternative': function($this) {
-//                 $('#portfolio').show();
-//                 $('#menu-portfolio').parents('li').show();
-//                 portfolioShowed = true;
-//            }}
-//        ]
-//    });
+    $('.pages_form_btn').click(function(){
+        $(this).fadeOut(function(){
+            $(this).siblings('.pages_form').fadeIn();
+        });
+    });
+    
+    $('#portfolio').easyab({
+        'slot': 1,
+        'name': 'portfolio-show',
+        'default-value': 'block',
+        'alternatives': [{
+            'value': 'none',
+            'alternative': function($this) {
+                $('#portfolio').hide();
+                $('#menu-portfolio').parents('li').hide();
+                portfolioShowed = false;
+            }},
+            {'value': 'block',
+             'alternative': function($this) {
+                 $('#portfolio').show();
+                 $('#menu-portfolio').parents('li').show();
+                 portfolioShowed = true;
+            }}
+        ]
+    });
     
     $('#brif-req-btn').click(function(){
         $('#brif-btns').fadeOut(function(){
@@ -124,7 +138,7 @@ function pagesCarouselInit() {
 function pagesCarouselStart() {
     pagesTimer = setInterval(function(){
         movePages();
-    }, 5000);
+    }, 9500);
 }
 function movePages(){
     if ( !$('#pages-block-wrapper').css('margin-left') || $('#pages-block-wrapper').css('margin-left') == '0px' ) {
@@ -145,7 +159,7 @@ function startSloganScroll() {
         } else {
             wrapper.css('margin-left', '0px');
         }
-    }, 8000);
+    }, 4500);
 }
 
 
@@ -173,7 +187,7 @@ function servicesCarouselStart() {
                     : ( (active == '1630') ? '0' : '0' ) 
                 );
         moveServices(pos);
-    }, 5000);
+    }, 8500);
 }
 
 function moveServicesArrow(right) {
@@ -249,10 +263,10 @@ function countdown() {
     var dateX = new Date(end - today); /* узнаем разницу в милисекундах и запишем в переменную dateX */
     var perDays = 60 * 60 * 1000 * 24; /* произведем расчет милисекунд в сутки и запишем в переменную perDays */
     
-    $('.timer .days').text( Math.round(dateX/perDays) );
-    $('.timer .hours').text( dateX.getUTCHours().toString() );
-    $('.timer .minutes').text( dateX.getMinutes().toString() );
-    $('.timer .seconds').text( dateX.getSeconds().toString() );
+    $('.timer .days').text( Math.round(dateX/perDays) < 10 ? '0'+ Math.round(dateX/perDays) : Math.round(dateX/perDays));
+    $('.timer .hours').text( dateX.getUTCHours() < 10 ? '0'+dateX.getUTCHours().toString() : dateX.getUTCHours().toString() );
+    $('.timer .minutes').text( dateX.getMinutes() < 10 ? '0'+dateX.getMinutes().toString() : dateX.getMinutes().toString() );
+    $('.timer .seconds').text( dateX.getSeconds() < 10 ? '0'+dateX.getSeconds().toString() : dateX.getSeconds().toString() );
 }
 
 function setForms() {
@@ -293,7 +307,32 @@ function showRequest(formData, jqForm, options) {
             $('.success-brif').show();
         });
     }
-//    _gaq.push(['_trackEvent', 'Portfolio showed on form submit', portfolioShowed]);
+    
+    if ( jqForm.hasClass('call_form') ) {
+        $('.call_form').fadeOut(function(){
+            $('.call-form-thanks').fadeIn();
+        });
+    } else if ( jqForm.hasClass('tarif_form') ) {
+        $('#tarif-form').fadeOut();
+    } else if ( jqForm.hasClass('portfolio_form') ) {
+        $('#get_portfoilio_form').fadeOut(function(){
+            $('.portfolio-form-thanks').fadeIn();
+        });
+    } else if ( jqForm.hasClass('pages_form') )  {
+        $('.page form').fadeOut(function(){
+            $('.pages-form-thanks').fadeIn();
+        });
+    } else if ( jqForm.hasClass('brif_req_form') ) {
+        $('#get_brif_form').fadeOut(function(){
+            $('.brif-form-thanks').fadeIn();
+        });
+    }
+    
+    if ( portfolioShowed )  {
+        _gaq.push(['_trackEvent', 'Отправка формы при показаном портфолио', portfolioShowed]);
+    } else {
+        _gaq.push(['_trackEvent', 'Отправка формы при скрытом портфолио', portfolioShowed]);
+    }
 
     return true; 
 } 

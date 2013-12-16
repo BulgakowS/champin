@@ -1,5 +1,7 @@
 <?php
 
+require 'SendMail.php';
+
 //$admin_mail = 'studio@champin12.com';
 $admin_mail = 'bulgakows@gmail.com';
 
@@ -92,14 +94,14 @@ switch ( $post['type'] ) {
         if ( $_FILES['file2'] ) {
             $docs['file2'] = saveFile($_FILES['file2']);
         }
-        if ( $_FILES['file3'] ) {
-            $docs['file3'] = saveFile($_FILES['file3']);
-        }
+//        if ( $_FILES['file3'] ) {
+//            $docs['file3'] = saveFile($_FILES['file3']);
+//        }
         
         $subject = 'Champin - Бриф!';
         $message = "<h2>Пользователь ".$post['step4-4']." - ".$post['step4-6']." заполнил бриф на разработку.</h2>";
         $message .= '<table>';
-        $message .= '<tr><td>Шаг 1. О компании</td><td></td></tr>';
+        $message .= '<tr><td><h3>Шаг 1. О компании</h3></td><td></td></tr>';
         $message .= '<tr><td>Название компании</td><td>'.$post['step1-1'].'</td></tr>';
         $message .= '<tr><td>Описание услуг и товаров</td><td>'.$post['step1-2'].'</td></tr>';
         $message .= '<tr><td>География деятельности</td><td>'.$post['step1-3'].'</td></tr>';
@@ -108,7 +110,7 @@ switch ( $post['type'] ) {
         $message .= '<tr><td>Что должен сделать или почувствовать посетитель?</td><td>'.$post['step1-6'].'</td></tr>';
         $message .= '<tr><td>Адрес сайта</td><td>'.$post['step1-7'].'</td></tr>';
         
-        $message .= '<tr><td>Шаг 2. Дизайн</td><td></td></tr>';
+        $message .= '<tr><td><h3>Шаг 2. Дизайн</h3></td><td></td></tr>';
         $message .= '<tr><td>Фирменный стиль</td><td>';
         $message .= $docs['file1'] ? ('<a href="http://champin12.com'.$docs['file1'].'">'.файл.'</a>'):'';
         $message .= '</td></tr>';
@@ -121,7 +123,7 @@ switch ( $post['type'] ) {
         $message .= '<tr><td>Пожелания своими словами</td><td>'.$post['step2-4'].'</td></tr>';
         $message .= '<tr><td>Примеры</td><td>'.$post['step2-5'].'</td></tr>';
         
-        $message .= '<tr><td>Шаг 3. Функционал</td><td></td></tr>';
+        $message .= '<tr><td><h3>Шаг 3. Функционал</h3></td><td></td></tr>';
         $message .= '<tr><td>Техническое задание</td><td>';
         $message .= $docs['file2'] ? ('<a href="http://champin12.com'.$docs['file2'].'">'.файл.'</a>'):'';
         $message .= '</td></tr>';
@@ -134,16 +136,16 @@ switch ( $post['type'] ) {
         $message .= '<tr><td>Сайты с желаемой структурой</td><td>'.$post['step3-4'].'</td></tr>';
         $message .= '<tr><td>Возможность самостоятельного заполнения сайта через систему управления</td><td>'.($post['step3-5'] ? "Да" : 'Нет').'</td></tr>';
         
-        $message .= '<tr><td>Шаг 4. Реквизиты заказчика</td><td></td></tr>';
-        $message .= '<tr><td>Реквизиты для составления договора</td><td>';
-        $message .= $docs['file3'] ? ('<a href="http://champin12.com'.$docs['file3'].'">'.файл.'</a>'):'';
-        $message .= '</td></tr>';
-        $message .= '<tr><td>Pеквизиты заказчика</td><td>'.$post['step4-2'].'</td></tr>';
-        $message .= '<tr><td>Удобен наличный расчет</td><td>'.($post['step4-3'] ? 'Да' : 'Нет').'</td></tr>';
+        $message .= '<tr><td><h3>Шаг 4. Контакты</h3></td><td></td></tr>';
+//        $message .= '<tr><td>Реквизиты для составления договора</td><td>';
+//        $message .= $docs['file3'] ? ('<a href="http://champin12.com'.$docs['file3'].'">'.файл.'</a>'):'';
+//        $message .= '</td></tr>';
+//        $message .= '<tr><td>Pеквизиты заказчика</td><td>'.$post['step4-2'].'</td></tr>';
+//        $message .= '<tr><td>Удобен наличный расчет</td><td>'.($post['step4-3'] ? 'Да' : 'Нет').'</td></tr>';
         $message .= '<tr><td>Имя контактного лица</td><td>'.$post['step4-4'].'</td></tr>';
         $message .= '<tr><td>Телефон</td><td>'.$post['step4-5'].'</td></tr>';
         $message .= '<tr><td>E-mail</td><td>'.$post['step4-6'].'</td></tr>';
-        $message .= '<tr><td>Когда удобно приехать для обсуждения проекта?</td><td>'.$post['step4-7'].'</td></tr>';
+//        $message .= '<tr><td>Когда удобно приехать для обсуждения проекта?</td><td>'.$post['step4-7'].'</td></tr>';
         $message .= '</table>';
                 
         $res = send_mail($admin_mail, $subject, $message, $post['step4-6'], $subject, $message);
@@ -156,20 +158,51 @@ switch ( $post['type'] ) {
 exit;
 
 
-function send_mail($to, $subject_admin, $text_admin, $to_user = false, $subject_user = false, $text_user = false ){
+function send_mail($to, $subject_admin, $text_admin, $to_user = false, $subject_user = false, $text_user = false ) 
+{
+    $res_admin = false;
+    $res_user = false;
+    
     $message_admin = "<html><head><title>$subject_admin</title></head><body>$text_admin</body></html>";
-    $headers = 'Content-type: text/html; charset=iso-8859-1' . "\r\n" .
-        'From: noreplay@champin12.com' . "\r\n" .
-        'Reply-To: noreplay@champin12.com' . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+    
+//    $res_admin = mail($to, $subject_admin, $message_admin, $headers);
+//
+//    if ( $to_user || $subject_user || $text_user ) {
+//        $message_user = "<html><head><title>$subject_user</title></head><body>$text_user</body></html>";
+//
+//        $res_user = mail($to_user, $subject_user, $message_user, $headers);
+//    }
+    
+    $files = array();
 
-    $res_admin = mail($to, $subject_admin, $message_admin, $headers);
+    $send_mail = new SendMail();
 
-    if ( $to_user || $subject_user || $text_user ) {
+    $res_admin = $send_mail->email($to)                   // Адресат (можно массив адресов)
+                ->from_name('Champin')                    // Имя отправителя
+                ->from_mail('noreplay@champin12.com')     // Адрес отправителя
+                ->subject($subject_admin)                 // Тема сообщения
+                ->message($message_admin)                 // Тело сообщения
+                ->files($files)                           // Путь до прикрепляемого файла (можно массив)
+                ->charset('utf-8')                        // Кодировка (по умолчанию utf-8)
+                ->time_limit(30)                          // set_time_limit (по умолчанию == 30с.)
+                ->content_type('html')                    // тип сообщения (по умолчанию 'plain')
+                ->send();                                 // Отправка почты  
+    
+    if ($to_user && $subject_user && $text_user) {
         $message_user = "<html><head><title>$subject_user</title></head><body>$text_user</body></html>";
-
-        $res_user = mail($to_user, $subject_user, $message_user, $headers);
+        
+        $res_user = $send_mail->email($to_user)          // Адресат (можно массив адресов)
+                ->from_name('Champin')                    // Имя отправителя
+                ->from_mail('noreplay@champin12.com')     // Адрес отправителя
+                ->subject($subject_user)                  // Тема сообщения
+                ->message($message_user)                 // Тело сообщения
+                ->files($files)                           // Путь до прикрепляемого файла (можно массив)
+                ->charset('utf-8')                        // Кодировка (по умолчанию utf-8)
+                ->time_limit(30)                          // set_time_limit (по умолчанию == 30с.)
+                ->content_type('html')                    // тип сообщения (по умолчанию 'plain')
+                ->send();                                 // Отправка почты  
     }
+    
     return array( 'status' => array('admin' => $res_admin, 'user' => $res_user) );
 }
 
@@ -200,4 +233,9 @@ function saveFile($file) {
         return false;
     }
 }
+
+
+
+
+
 ?>

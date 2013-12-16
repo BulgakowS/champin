@@ -1,6 +1,7 @@
 body {
     font-family: 'Intro-Bold';
     background: #fff;
+    min-width: 480px; 
 }
 a:focus, a { outline: none; }
 
@@ -49,16 +50,17 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
 
 /***************** call form ****************/
 .call-form { text-align: center; margin-top: 20px; color: #fff; }
-.call-form .to { font-size: 30px; font-family: 'Intro-Bold'; }
-.call-form .timer { font-size: 40px; font-family: 'Intro-Book'; }
-.call-form .timer b { font-size: 40px; font-family: 'Intro-Bold'; }
-.call-form .text { font-size: 18px; font-family: 'Intro-Book'; }
-.call-form .text span { font-size: 18px; font-family: 'Intro-Bold'; }
+.call-form .to { font-size: 20px; font-family: 'Intro-Bold'; }
+.call-form .timer { font-size: 22px; font-family: 'Intro-Book'; }
+.call-form .timer b { font-size: 26px; font-family: 'Intro-Bold'; }
+.call-form .text { font-size: 14px; font-family: 'Intro-Book'; }
+.call-form .text span { font-size: 14px; font-family: 'Intro-Bold'; }
 .call-form .form { margin: 25px 0 15px; }
 .call-form .form input { height: 45px; font-size: 16px; margin: 0 4px; font-family: 'Intro-Bold'; }
 .call-form .form input[type="text"] { 
     background: transparent; padding: 0 10px; color: #fff; 
-    border: 2px #fff solid; width: 197px; font-family: 'Intro-Book';
+    border: 2px #fff solid; width: 300px; font-family: 'Intro-Book';
+    margin: 5px auto;
 }
 .call-form .form input[type="text"]::-webkit-input-placeholder { color: #ccc; }
 .call-form .form input[type="text"]:-moz-placeholder { color: #ccc; }
@@ -93,11 +95,11 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
 /***************** Header *******************/
 #header {
     width: 100%;
-    height: 675px;
+    height: 560px;
     background: url('imgs/header-background.png') no-repeat center center;
     overflow: hidden;
 }
-#menu-wrapper { height: 165px; }
+#menu-wrapper { height: 80px; }
 
 /*************** menu big *******************/
 #header-menu {
@@ -113,6 +115,7 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
 /*#header-menu ul { 
     width: 960px; display: block; position: relative; margin: o auto; 
 }*/
+.nav > li > a { padding: 0; }
 .nav > li > a:focus, 
 .nav > li > a:hover {
     background: rgba(0,0,0,0);
@@ -134,7 +137,7 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
     list-style: none;
     outline: 0;
 }
-#header-menu ul li.menu-link { margin: 15px 15px 0; outline: 0;}
+#header-menu ul li.menu-link { margin: 15px 5px 0; outline: 0;}
 #header-menu ul li a {
     color: #fff;
     text-decoration: none;
@@ -149,10 +152,11 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
     text-decoration: none;
 }
 #header-menu ul li.menu-link-logo a {
-    width: 263px;
-    height: 118px; 
+    width: 132px;
+    height: 59px;
     background: url('imgs/menu-logo.png') no-repeat center center;
-    margin-top: 15px;
+    background-size: 132px 59px;
+/*    margin-top: 15px;*/
 }
 
 /**** menu-small ****/
@@ -169,10 +173,10 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
     -khtml-opacity: 0.9; 
     opacity: 0.9; 
     z-index: 1000;
-    min-width: 960px;
+    min-width: 100%;
 }
 #header-menu.fixed ul li {
-    margin: 0 15px;
+    margin: 0 5px;
     display: inline-block;
     vertical-align:middle;
     border-top: 4px transparent solid;
@@ -187,10 +191,10 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
     text-transform: uppercase;
 }
 #header-menu.fixed ul li.menu-link-logo a {
-    width: 263px;
-    height: 65px; 
+    width: 131px;
+    height: 59px;
     background: url('imgs/menu-logo-black.png') no-repeat center center;
-    margin: 5px 25px;
+    margin: 5px;
     padding: 0;
 }
 #header-menu.fixed ul li.menu-link:hover, 
@@ -205,28 +209,27 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
 
 /******** header-content *********/
 #header-content {
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
 }
 #header-slogan {
-    width: 685px;
+    width: 480px;
     margin: 0 auto;
-    padding-bottom: 40px; 
 }
 .big-green-bracket {
     font-family: 'Intro-Bold';
-    font-size: 94px;
+    font-size: 55px;
     color: #12c28a;
     position: absolute;
 }
 .big-green-bracket.right{
-    margin-left: 655px;
+    margin-left: 435px;
 }
 #slogan-text {
     display: block;
     position: relative;
-    width: 640px;
-    height: 155px;
+    width: 480px;
+    height: 80px;
     margin: 10px auto;
     /*overflow: hidden;*/
 }
@@ -252,14 +255,14 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
     padding-top: 20px;
 }
 #slogan-text ul li div {
-    width: 640px;
-    font-size: 40px;
+    width: 480px;
+    font-size: 20px;
     color: #fff;
     text-align: center;
-    line-height: 50px;
+    line-height: 25px;
 }
 #header-call-form {
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
     color: #fff;
     overflow: hidden;
@@ -284,12 +287,12 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
     font-size: 36px  !important;
     line-height: 40px;
 }
-#header-call-form .call-form-thanks { margin-bottom: 10px; }
+#header-call-form .call-form-thanks { margin: 40px 0 55px;}
 .brif-form-thanks {
-    font-size: 16px !important;
+    font-size: 12px !important;
 }
 .brif-form-thanks p {
-    font-size: 24px  !important;
+    font-size: 20px  !important;
     margin-bottom: 0 !important;
 }
 .portfolio-form-thanks,
@@ -297,7 +300,7 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
 .brif-form-thanks{ color: #000 !important; }
 /********** Services - slider ***********/
 .services { padding: 20px 0 30px; border-bottom: 1px #d7d7d7 solid; }
-.services #services-slider { width: 960px; margin: 0 auto; }
+.services #services-slider { width: 100%; margin: 0 auto; }
 .services #services-slider .arrow { margin-top: 80px; }
 .services #services-slider #titles { text-align: center; }
 .services #services-slider #titles a {
@@ -306,7 +309,7 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
     text-align: center;
     color: #727272;
     font: 'Intro-Bold';
-    font-size: 24px;
+    font-size: 18px;
     padding-top: 25px;
 }
 .services #services-slider #titles a:hover, 
@@ -321,7 +324,7 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
     display: block;
     position: relative;
     border: 3px #000 solid;
-    width: 815px;
+    width: 400px;
     height: 155px;
     margin: 10px auto;
     overflow: hidden;
@@ -343,25 +346,24 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
     margin-bottom: 0;
 }
 .services #services-slider #services-text #services-text-wrapper ul li {
+    font-size: 16px;
     float: left;
     text-align: left;
-    padding: 25px 60px;
-    width: 815px;
-    margin: 0;
+    padding: 0px 10px;
+    width: 400px;
+    margin: 0 410px 0 0;
     list-style: none;
+    text-align: left;
 }
-#services-text-wrapper li[data-slide="design"] { padding-top: 30px !important; }
-#services-text-wrapper li[data-slide="develop"] { padding-top: 35px !important; }
-#services-text-wrapper li[data-slide="marketing"] { padding-top: 23px !important; }
 .services #services-slider #services-text #services-text-wrapper li b{
     font-family: 'Intro-Bold';
-    font-size: 18px;
+    font-size: 16px;
     color: #727272;
 }
 
 /********** Services - popups ***********/
 
-.services #services-popups { width: 960px; margin: 0 auto; text-align: center;}
+.services #services-popups { width: 100%; margin: 0 auto; text-align: center;}
 .services #services-popups h1 { font-family: 'Intro-Bold'; font-size: 36px; margin: 60px 0 20px;}
 .services #services-popups p { font-family: 'Intro-Book'; font-size: 16px; }
 .services #services-popups #circles { margin-top: 100px; margin-bottom: 65px; }
@@ -375,7 +377,7 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
     margin: 5px;
     zoom: 1;
     *display: inline;
-    margin: 0 60px;
+    margin: 0 10px;
     font-family: 'Intro-Black-Caps';
     font-size: 16px;
     cursor: help;
@@ -451,7 +453,7 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
 
 /******* pages ********/
 #landing-long-page {
-    width: 960px;
+    width: 100%;
     margin: 35px auto 0;
 }
 #landing-long-page .arrow {
@@ -460,7 +462,7 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
 #landing-long-page #pages-block-slider {
     display: block;
     position: relative;
-    width: 880px;
+    width: 400px;
     margin: 10px auto;
     overflow: hidden;
     font-family: 'Intro-Book';
@@ -484,44 +486,48 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
     float: left;
     text-align: left;
     padding: 35px 0;
-    width: 880px;
+    width: 400px;
     /*margin: 0 25px;*/
     list-style: none;
+    margin-right: 480px;
+    height: 390px;
 }
 #pages-block-slider #pages-block-wrapper ul li div.exmpl {
-    width: 279px;
-    height: 344px;
-    margin-right: 25px;
-    margin-left: 10px;
+    width: 140px;
+    height: 172px;
+/*    margin-right: 25px;
+    margin-left: 10px;*/
 }
 #pages-block-slider #pages-block-wrapper ul li.landing .exmpl {   
     background: url('imgs/landing-logo.png') no-repeat left center;
+    background-size: 140px 172px;
 }
 #pages-block-slider #pages-block-wrapper ul li.long .exmpl {
     background: url('imgs/longpage-logo.png') no-repeat left center;
+    background-size: 140px 172px;
 }
 #pages-block-slider #pages-block-wrapper ul li .cont {
     display: block;
-    width: 515px;
-    margin-top: 10px;
-    margin-right: 50px;
+    width: 260px;
+    margin-top: 0;
+    margin-right: 0;
 }
 #pages-block-slider #pages-block-wrapper ul li .cont h2 {
     font-family: 'Intro-Bold';
-    font-size: 36px;
+    font-size: 20px;
     color: #000;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 #pages-block-slider #pages-block-wrapper ul li .cont p {
     font-family: 'Intro-Book';
-    font-size: 16px;
+    font-size: 12px;
     color: #4c4c4c;
     margin-bottom: 10px;
 }
 #pages-block-slider #pages-block-wrapper ul li .cont p b {
     font-family: 'Intro-Bold';
-    font-size: 16px;
+    font-size: 12px;
     color: #4c4c4c;
 }
 #pages-block-slider #pages-block-wrapper ul li .cont .form {
@@ -533,7 +539,7 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
 #pages-block-slider #pages-block-wrapper ul li .cont .form input[type="text"],
 #pages-block-slider #pages-block-wrapper ul li .cont .form input[type="email"]{ 
                 background: transparent; padding: 0 10px; color: #000; 
-                border: 2px #000 solid; width: 165px;
+                border: 2px #000 solid; width: 120px;
 }
 #pages-block-wrapper ul li .cont .form input::-webkit-input-placeholder { color: #a9a9a9 }
 #pages-block-wrapper ul li .cont .form input:-moz-placeholder { color: #a9a9a9; }
@@ -565,33 +571,35 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
 /********** tarifs **********/
 #tarifs-wrapper {
    width: 100%;
-   height: 940px;
+   height: 760px;
    background: url('imgs/tarif-background.png') no-repeat center center;
 }
 #tarifs #tarif-content {
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
 }
 #tarif-content h1 {
     font-family: 'Intro-Bold';
-    font-size: 36px;
+    font-size: 26px;
     text-align: center;
     color: #fff;
     padding-top: 50px;
     margin-bottom: 50px;
 }
 #tarif-content > ul {
-    height: 535px;
+    height: 420px;
+    width: 480px;
+    margin: 0 auto;
     margin-bottom: 30px;
 }
 #tarif-content > ul > li:first-child{ margin: 0; }
 #tarif-content > ul > li:last-child{ margin: 0; }
 #tarif-content > ul > li {
-    width: 305px;
-    height: 535px;
+    width: 160px;
+    height: 430px;
     float: left;
-    margin: 0 10px;
-    padding: 10px 20px;
+    margin: 0;
+    padding: 5px 15px;
     -moz-border-radius: 5px; /* Firefox */
     -webkit-border-radius: 5px; /* Safari, Google Chrome */
     -khtml-border-radius: 5px; /* KHTML */
@@ -616,64 +624,71 @@ input { font-family: 'Intro-Book';  font-size: 16px; padding: 6px 12px;}
 }
 #tarif-content > ul > li > h2 {
     font-family: 'Intro-Bold';
-    font-size: 36px;
-    padding-top: 75px;
-    margin-top: -30px;
+    font-size: 18px;
+    padding-top: 40px;
+    margin-top: 0px;
 }
 #tarif-content > ul > li.town > h2{
     background: url('imgs/town-icon.png') no-repeat right top;
+    background-size: 16px 37px;
 }
 #tarif-content > ul > li.city > h2{
     background: url('imgs/city-icon.png') no-repeat right top;
+    background-size: 22px 37px;
 }
 #tarif-content > ul > li.megapolis > h2{
     background: url('imgs/megapolis-icon.png') no-repeat right top;
+    background-size: 31px 37px;
 }
 ul.white-circle > li{
     list-style-image: url('imgs/popup-list-white.png');
     font-family: 'Intro-Book';
-    font-size: 14px;
+    font-size: 10px;
     margin-bottom: 5px;
 }
 #tarif-content > ul > li > ul {
-    margin-left: 15px;
-    margin-top: 15px;
+/*    margin-left: 15px;
+    margin-top: 15px;*/
 }
 
 #tarif-prices,
 #tarif-btns {
-    width: 960px;
+    width: 480px;
     margin: 0 auto;
 }
 #tarif-prices ul {
-    height: 70px;
+    height: 35px;
+    width: 480px;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 #tarif-prices ul li:first-child,
 #tarif-btns ul li:first-child { margin: 10px 0 0; }
 #tarif-prices ul li:last-child,
 #tarif-btns ul li:last-child { margin: 10px 0 0; }
 #tarif-prices ul li {
-    margin: 10px 10px 0; width: 305px; height: 70px;
+    margin: 10px 0; width: 150px; height: 35px;
     float: left; list-style: none; color: #fff;
-    font-family: 'Intro-Bold'; font-size: 45px;
+    font-family: 'Intro-Bold'; font-size: 16px;
     text-align: center;
 }
-#tarif-prices ul li span { font-size: 25px; }
+#tarif-prices ul li span { font-size: 12px; }
 #tarif-prices ul li span.up { vertical-align: super; }
 
 #tarif-btns ul li {
-    margin: 10px; width: 305px;  float: left; 
+    margin: 10px 0; width: 160px;  float: left; 
     list-style: none; color: #fff; text-align: center;
 }
 #tarif-btns ul li > div {
-    width: 170px; color: #fff; border: 2px #a9a9a9 solid;
+    width: 154px; color: #fff; border: 2px #a9a9a9 solid;
+    margin: 0 auto;
     background:rgb(0,0,0);
-	background: transparent\9;
-	background:rgba(0,0,0,0.6);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
-	zoom: 1;
+    background: transparent\9;
+    background:rgba(0,0,0,0.6);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+    zoom: 1;
     font-family: 'Intro-Bold'; font-size: 18px; text-align: center;
-    width: 195px; margin: 10px auto; padding: 10px;
+    padding: 10px;
     -webkit-transition: all 0.15s ease-in-out;
     -moz-transition: all 0.15s ease-in-out;
     -o-transition: all 0.15s ease-in-out;
@@ -688,13 +703,13 @@ ul.white-circle > li{
 #tarifs-wrapper #tarif-form {
     position: absolute;
     width: 100%;
-    height: 940px;
+    height: 760px;
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.9);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 	zoom: 1;
-    margin-top: -835px;
+    margin-top: -683px;
     
     display: none;
 }
@@ -759,7 +774,8 @@ ul.white-circle > li{
 }
 #after-tarif-call-form .call-form .form input[type="text"] { 
     background: transparent; padding: 0 10px; color: #fff; 
-    border: 2px #fff solid; width: 197px; font-family: 'Intro-Book';
+    border: 2px #fff solid; width: 300px; margin: 5px 0; 
+    font-family: 'Intro-Book';
 }
 #after-tarif-call-form .call-form .form input::-webkit-input-placeholder { color: #eee; }
 #after-tarif-call-form .call-form .form input:-moz-placeholder { color: #eee; }
@@ -782,12 +798,12 @@ ul.white-circle > li{
 /***** potfolio ******/
 #portfolio {
     width: 100%; 
-    height: 725px;
+    height: 580px;
     border-bottom: 1px #d7d7d7 solid;
 }
 
 #portfolio #portfolio-header {
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 80px;
 }
@@ -806,15 +822,15 @@ ul.white-circle > li{
 }
 
 #portfolio #portfoiio-examples {
-    width: 1086px;
+    width: 480px;
     margin: 50px auto 25px; 
 }
 #portfolio #portfoiio-examples ul li {
     list-style: none;
     float: left;
     margin: 0;
-    padding: 340px 0 0;
-    width: 362px;
+    padding: 130px 0 0;
+    width: 160px;
     text-align: center;
     -webkit-transition: background 0.15s ease-in-out;
     -moz-transition: background 0.15s ease-in-out;
@@ -823,13 +839,16 @@ ul.white-circle > li{
     transition: background 0.15s ease-in-out;
 }    
 #portfolio #portfoiio-examples ul li.first {
-    background: url("imgs/portfolio-example-1.png") no-repeat top center; 
+    background: url("imgs/portfolio-example-1.png") no-repeat top center;
+    background-size: 160px auto;
 }
 #portfolio #portfoiio-examples ul li.second {
     background: url("imgs/portfolio-example-2.png") no-repeat top center; 
+    background-size: 160px auto;
 }
 #portfolio #portfoiio-examples ul li.third {
     background: url("imgs/portfolio-example-3.png") no-repeat top center; 
+    background-size: 160px auto;
 }
 #portfolio #portfoiio-examples ul li:hover {
     background: #12c28a; 
@@ -840,7 +859,7 @@ ul.white-circle > li{
 #portfolio #portfoiio-examples ul li:hover p { color: #fff; }
 #portfolio #portfoiio-examples ul li h3 {
     font-family: 'Intro-Bold';
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 0;
 }
 #portfolio #portfoiio-examples ul li p {
@@ -850,19 +869,19 @@ ul.white-circle > li{
 }    
     
 #portfolio #portfolio-form {
-    width: 960px;
+    width: 100%;
     margin: 10px auto;
     text-align: center;
 }
 #portfolio #portfolio-form input,
 #brif-req-form input{
     height: 45px; font-size: 16px; 
-    margin: 0 4px; border: 2px #000 solid;
+    margin: 0; border: 2px #000 solid;
 }
 #brif-req-form input { width: 200px; }
 #portfolio #portfolio-form input[type="email"] { 
     background: transparent; padding: 0 10px; 
-    color: #000; width: 360px;
+    color: #000; width: 360px; margin: 5px 0;
 }
 #portfolio #portfolio-form input[type="email"]::-webkit-input-placeholder { color: #4c4c4c; }
 #portfolio #portfolio-form input[type="email"]:-moz-placeholder { color: #4c4c4c; }
@@ -897,33 +916,38 @@ ul.white-circle > li{
 #form_brief .nav li.active a { color: #fff; background: #12c28a !important;}
 #form_brief .nav li a { color: #000; }
 #brif {
-    width: 880px;
-    height: 600px;
+    width: 480px;
+    height: 360px;
     margin: 0 auto;
     padding: 0 0 0 25px;
     padding-top: 50px;
 }
 #brif #brif-img {
-    width: 356px;
-    height: 511px;
+    width: 178px;
+    height: 255px;
     background: url('imgs/brief-icon.png') no-repeat center center;
-    margin-right: 85px;
+    background-size: 178px 255px;
+    margin-right: 10px;
 }
 #brif #brif-text {
-    padding-top: 65px;
+    /*padding-top: 65px;*/
 }
 #brif #brif-text h1 {
     font-family: 'Intro-Bold';
-    font-size: 36px;
+    font-size: 18px;
     margin-bottom: 20px;
 }
 #brif #brif-text p {
     font-family: 'Intro-Book';
-    font-size: 16px;
+    font-size: 12px;
     color: #4c4c4c;
-    margin-bottom: 55px;
+    /*margin-bottom: 55px;*/
 }
-#brif #brif-text .submit { width: 195px; }
+#brif #brif-text .submit { 
+    width: 220px;
+    float: left !important;
+    margin: 5px 0;
+}
 
 /******** footer *******/
 #footer {
@@ -934,9 +958,9 @@ ul.white-circle > li{
 }
 #footer > h1{
     font-family: 'Intro-Bold';
-    font-size: 40px;
+    font-size: 24px;
     color: #fff;
-    padding-top: 40px;
+    padding-top: 10px;
 }
 #footer > p {
     font-family: 'Intro-Book';
@@ -944,10 +968,10 @@ ul.white-circle > li{
     color: #a9a9a9;
 }
 #footer .call-form .form {
-    margin: 55px 0;
+    margin: 0;
 }
 #footer #footer-logo {
-    padding-top: 20px;
+    padding-top: 50px;
 }
 #footer #footer-logo a {
     display: block;
@@ -1003,4 +1027,4 @@ ul.white-circle > li{
     color: #a9a9a9;
 }
 
-#brief_modal .modal-dialog {width: 60%;}
+#brief_modal .modal-dialog {width: 90%;}
