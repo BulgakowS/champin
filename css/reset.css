@@ -1,4 +1,15 @@
 /* --------------- reset.css --------------- */
+header
+,nav
+,section
+,article
+,aside
+,footer
+,hgroup 
+{ 
+display: block;
+}
+ 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td {
 	margin: 0;
 	padding: 0;
@@ -27,7 +38,7 @@ input, select, button, textarea {
 	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
 }
 input[type="text"], input[type="password"], textarea {
-	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+	/*padding: 0; 				 убираем внутренние отступы для текстовых полей */
 }
 input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
 	vertical-align: bottom;

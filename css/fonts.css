@@ -1,3 +1,55 @@
+@font-face {
+    font-family: 'Intro-Black';
+    src: url('fonts/intro-black-webfont.eot');
+    src: url('fonts/intro-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/intro-black-webfont.woff') format('woff'),
+         url('fonts/intro-black-webfont.ttf') format('truetype'),
+         url('fonts/intro-black-webfont.svg#intro_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Intro-Bold';
+    src: url('fonts/intro-bold-webfont.eot');
+    src: url('fonts/intro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/intro-bold-webfont.woff') format('woff'),
+         url('fonts/intro-bold-webfont.ttf') format('truetype'),
+         url('fonts/intro-bold-webfont.svg#intro_boldregular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Intro-Book';
+    src: url('fonts/intro-book-webfont.eot');
+    src: url('fonts/intro-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/intro-book-webfont.woff') format('woff'),
+         url('fonts/intro-book-webfont.ttf') format('truetype'),
+         url('fonts/intro-book-webfont.svg#intro_bookregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Intro-Black-Caps';
+    src: url('fonts/intro-black-caps-webfont.eot');
+    src: url('fonts/intro-black-caps-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/intro-black-caps-webfont.woff') format('woff'),
+         url('fonts/intro-black-caps-webfont.ttf') format('truetype'),
+         url('fonts/intro-black-caps-webfont.svg#intro_black_capsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+
+
+
+/*
+
+
+
 
 @font-face {
     font-family: Intro-Black-Alt;
@@ -111,4 +163,4 @@
 @font-face {
     font-family: Intro-Thin;
     src: url("fonts/Intro-Thin.otf") format("opentype");
-}
+}*/

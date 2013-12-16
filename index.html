@@ -1,77 +1,749 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Champin - Marketing Agency</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <!--<script src="js/smooth-scroll.js" type="text/javascript"></script>-->
+        <script src="js/easyab.min.js" type="text/javascript"></script>
+        <script src="js/jquery.form.js"></script>
         
         <link href="css/reset.css" type="text/css" rel="stylesheet">
         <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
         <link href="css/fonts.css" type="text/css" rel="stylesheet">
         <link href="css/styles.css" type="text/css" rel="stylesheet">
+        <!--<link href="css/brief.css" type="text/css" rel="stylesheet">-->
         
-        <script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
     </head>
-    <body>
+    <body data-spy="scroll" data-target="#header-menu">
+        <!--[if lt IE 9]>
+            <script>
+                document.createElement('header');
+                document.createElement('nav');
+                document.createElement('section');
+                document.createElement('article');
+                document.createElement('aside');
+                document.createElement('footer');
+                document.createElement('hgroup');
+            </script>
+        <![endif]-->
         <div id="header">
             <div id="top-line"></div>
-            <nav id="header-menu" >
-                <a href="#">CHAMPIN</a>
-                <a href="#">УСЛУГИ</a>
-                <a href="#" class="menu-link-logo"></a>
-                <a href="#">ПОРТФЕЛЬ</a>
-                <a href="#">КОНТАКТЫ</a>
-            </nav>
+            <div id="menu-wrapper">
+                <nav id="header-menu" class="navbar-scrollspy">
+                    <ul class="nav">
+                        <li class="menu-link"><a href="#header-content" id="menu-champin" class="scroll" data-speed="500" data-easing="easeInOutCubic">CHAMPIN</a></li>
+                        <li class="menu-link"><a href="#first-services" id="menu-services" class="scroll" data-speed="500" data-easing="easeInOutCubic">УСЛУГИ</a></li>
+                        <li class="menu-link-logo"><a href="#header" id="menu-logo" class="scroll" data-speed="500" data-easing="easeInOutCubic"></a></li>
+                        <li class="menu-link"><a href="#portfolio" id="menu-portfolio" class="scroll" data-speed="500" data-easing="easeInOutCubic">РАБОТЫ</a></li>
+                        <li class="menu-link"><a href="#footer" id="menu-footer" class="scroll" data-speed="500" data-easing="easeInOutCubic">КОНТАКТЫ</a></li>
+                    </ul>
+                </nav>
+            </div>
             <section id="header-content">
                 <div id="header-slogan">
-                
+                    <span class="big-green-bracket">[</span>
+                    <span class="big-green-bracket right">]</span> 
+                    <div id="slogan-text">
+                        <div id="slogan-text-wrapper">
+                            <ul>
+                                <li class="item">
+                                    <div>СОЗДАЕМ УНИКАЛЬНЫЕ <br>И ЭФФЕКТИВНЫЕ <span class="green">САЙТЫ</span></div>
+                                </li>    
+                                <li class="item">
+                                    <div><span class="green">САЙТЫ</span> приносящие <br>на 20% больше прибыли</div>
+                                </li>
+                                <li class="item">
+                                    <div><span class="green">САЙТЫ</span>, решающие <br>конкретные базнес задачи</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+            </section>
+            <div class="dotted-line"></div>
+            <section id="header-call-form">
                 <div class="call-form">
-
+                    <p class="to green">до 31 января скидка 30%</p>
+                    <p class="timer"><b class="days">25</b> дней / <b class="hours">08</b> часов / <b class="minutes">10</b> минут / <b class="seconds">12</b> секунд</p>
+                    <p class="text">Закажите прямо сейчас свой уникальный сайт <span class="green">с гарантией конверсии</span></p>
+                    <form id="header-call-form-form" action="send_mail.php" method="POST" class="form call_form">
+                        <input type="text" name="name" class="name" placeholder="Ваше имя" required="required"/>  
+                        <input type="text" name="phone" class="phone" placeholder="Ваш телефон"  required="required"/>  
+                        <input type="hidden" name="type" value="call_form" />
+                        <input type="submit" class="submit" value="Заказать звонок"/>
+                    </form>
+                    <div class="call-form-thanks">
+                        <p>Спасибо за ваш интерес</p>
+                        Наш специалист свяжется с вами в течение 15 минут
+                    </div>
                 </div>
             </section>
         </div>
         <div id="content">
-            <section id="services">
+            <section id="first-services" class="services">
                 <div id="services-slider">
-
+                    <div id="titles">
+                        <a href="javascript:void(0);" data-slide="0" class="active">ДИЗАЙН</a>
+                        <a href="javascript:void(0);" data-slide="815">РАЗРАБОТКА</a>
+                        <a href="javascript:void(0);" data-slide="1630">МАРКЕТИНГ</a>
+                    </div>
+                    <span class="arrow arrow-left pull-left"></span>
+                    <span class="arrow arrow-right pull-right"></span>
+                    <div id="services-text">
+                        <div id="services-text-wrapper">
+                            <ul>
+                                <li data-slide="design">
+                                    <b>Мы знаем, что дизайн - это не просто картинка.</b> 
+                                    <br>Дизайн сайтов — это могучий бизнес-инструмент, который или реально увеличит ваши продажи, или сформирует имидж компании.
+                                </li>
+                                <li data-slide="develop">
+                                    <b>Для идеи нет границ.</b> 
+                                    <br>Наши специалисты раздвинут рамки возможного и заставят любую идею 
+                                    <br>работать на ваш бизнес.
+                                </li>
+                                <li data-slide="marketing">
+                                    <b>Развитие и рост вашей компании.</b> 
+                                    <br>Комплексный маркетинговый анализ вашего бизнеса 
+                                    <br>стратегический копирайтинг и SEO-оптимизация 
+                                    <br>сделают ваш сайт живым и приносящим прибыль.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+            </section>
+            <section class="services">
                 <div id="services-popups">
-
+                    <h1>УСЛУГИ</h1>
+                    <p>
+                        Мы создаем страницы захвата и длинностраничные сайты.
+                        <br>Ниже вы можете ознакомится с основными инструментами, при помощи которых мы достигаем эффективных результатов.
+                    </p>
+                    <ul id="circles">
+                        <li class="ux"><div class="service-circle" data-name="ux"></div>UX</li>
+                        <li class="design"><div class="service-circle" data-name="design"></div>DESIGN</li>
+                        <li class="seo"><div class="service-circle" data-name="seo"></div>SEO</li>
+                        <li class="smm"><div class="service-circle" data-name="smm"></div>SMM</li>
+                        <li class="tech"><div class="service-circle" data-name="tech"></div>TECH</li>
+                    </ul>
                 </div>
             </section>
-            <section id="landing-page">
-
+            <section id="landing-long-page">
+                <span class="arrow arrow-left pull-left"></span>
+                <span class="arrow arrow-right pull-right"></span>
+                <div id="pages-block-slider">
+                    <div id="pages-block-wrapper">
+                        <ul>
+                            <li class="page long">
+                                <div class="exmpl pull-left"></div>
+                                <div class="cont pull-right">
+                                    <h2>LONG PAGE</h2>
+                                    <p>
+                                        Длинностраничный сайт с информационной архитектурой, для систематизации информации и удобной навигации по ней с целью помочь людям более успешно находить и обрабатывать нужные им данные. 
+                                    </p>
+                                    <p>
+                                        Повышает статусность компании и лояльность клиентов. Позволяет настроить стратегический контент так, что вся информация, которая хранилась на 5 страницах вашего старого сайта, доступна пользователю всего на одной.
+                                    </p>
+                                    <form action="send_mail.php" method="POST" class="form pages_form">
+                                        <input type="text" name="name" class="name" placeholder="Ваше имя"  required="required"/>  
+                                        <input type="email" name="email" class="phone" placeholder="Ваш e-mail"  required="required"/>  
+                                        <input type="hidden" name="type" value="pages_form" />
+                                        <input type="hidden" name="page" value="long page" />
+                                        <input type="submit" class="submit" value="Заказать" />  
+                                    </form>
+                                    <div class="pages-form-thanks" style="display: none;">
+                                        <p>Спасибо за ваш интерес</p>
+                                        Наш специалист свяжется с вами в течение 15 минут
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="page landing">
+                                <div class="exmpl pull-left"></div>
+                                <div class="cont pull-right">
+                                    <h2>LANDING PAGE</h2>
+                                    <p>Cтраница захвата, которая позволит вам увеличить приток клиентов, получить новые лиды и побудить посетителя к действию, с помощью таких инструментов, как : 
+                                        <b>формы заявки, таймеры, стратегический контент и прототипирование</b>.
+                                    </p>
+                                    <form action="send_mail.php" method="POST" class="form pages_form">
+                                        <input type="text" name="name" class="name" placeholder="Ваше имя"  required="required"/>  
+                                        <input type="email" name="email" class="phone" placeholder="Ваш e-mail"  required="required"/>  
+                                        <input type="hidden" name="type" value="pages_form" />
+                                        <input type="hidden" name="page" value="landing page" />
+                                        <input type="submit" class="submit" value="Заказать" />  
+                                    </form>
+                                    <div class="pages-form-thanks" style="display: none;">
+                                        <p>Спасибо за ваш интерес</p>
+                                        Наш специалист свяжется с вами в течение 15 минут
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
-            <section id="tarifs">
-
-            </section>
+            <div id="tarifs-wrapper">
+                <section id="tarifs">
+                    <div id="tarif-content">
+                        <h1>
+                            ТАРИФНЫЕ ПЛАНЫ
+                            <br><span class="green">LANDING & LONG PAGES</span>
+                        </h1>
+                        <ul>
+                            <li class="town">
+                                <span class="pull-right">10 дней</span>
+                                <div class="clr"></div>
+                                <h2 class="green pull-left">TOWN</h2>
+                                <div class="clr"></div>
+                                <ul class="white-circle">
+                                    <li>Прототипирование</li>
+                                    <li>Стратегический контент</li>
+                                    <li>Информационная Архитектура</li>
+                                    <li>Веб-дизайн</li>
+                                    <li>Адаптивная мобильная версия</li>
+                                    <li>HTML и CSS</li>
+                                </ul>
+                            </li>
+                            <li class="city">
+                                <span class="pull-right">15 дней</span>
+                                <div class="clr"></div>
+                                <h2 class="green pull-left">CITY</h2>
+                                <div class="clr"></div>
+                                <ul class="white-circle">
+                                    <li>Прототипирование</li>
+                                    <li>Стратегический контент</li>
+                                    <li>Информационная Архитектура</li>
+                                    <li>Веб-дизайн</li>
+                                    <li>Адаптивная мобильная версия</li>
+                                    <li>Анимация элементов сайта</li>
+                                    <li>HTML и CSS</li>
+                                    <li>A/B тестирование</li>
+                                    <li>Домен и хостинг</li>
+                                    <li>Яндекс. Директ</li>
+                                    <li>Google Adwords</li>
+                                </ul>
+                            </li>
+                            <li class="megapolis">
+                                <span class="pull-right">25 дней</span>
+                                <div class="clr"></div>
+                                <h2 class="green pull-left">MEGAPOLIS</h2>
+                                <div class="clr"></div>
+                                <ul class="white-circle">
+                                    <li>Прототипирование</li>
+                                    <li>Стратегический контент</li>
+                                    <li>Информационная Архитектура</li>
+                                    <li>Веб-дизайн</li>
+                                    <li>Адаптивная мобильная версия</li>
+                                    <li>Анимация элементов сайта</li>
+                                    <li>HTML и CSS</li>
+                                    <li>A/B тестирование</li>
+                                    <li>Домен и хостинг</li>
+                                    <li>Яндекс. Директ</li>
+                                    <li>Google Adwords</li>
+                                    <li>Статистика воронки продаж</li>
+                                    <li>Привязка к CRM системе</li>
+                                    <li>Гарантия конверсии</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <div class="dotted-line"></div>
+                <section id="tarif-prices">
+                    <ul>
+                        <li>45 000 <span class="up">руб</span></li>
+                        <li><span class="down">от</span> 75 000 <span class="up">руб</span></li>
+                        <li><span class="down">от</span> 95 000 <span class="up">руб</span></li>
+                    </ul>
+                </section>
+                <div class="dotted-line"></div>
+                <section id="tarif-btns">
+                    <ul>
+                        <li><div class="tarif-btn" data-tarif="Town">Заказать</div></li>
+                        <li><div class="tarif-btn" data-tarif="City">Заказать</div></li>
+                        <li><div class="tarif-btn" data-tarif="Megapolis">Заказать</div></li>
+                    </ul>
+                </section>
+                <div id="tarif-form">
+                    <form action="send_mail.php" method="post" class="tarif_form">
+                        <h2>Отличный выбор!</h2>
+                        <p>Осталось только заполнить заявку</p>
+                        <ul>
+                            <li><input type="text" name="name" placeholder="Ваше имя"  required="required"/></li>
+                            <li><input type="text" name="phone" placeholder="Ваш телефон"  required="required"/></li>
+                            <li><input type="email" name="email" placeholder="Ваш e-mail"  required="required"/></li>
+                            <li><input type="submit" class='submit' value="Заказать" /></li>
+                        </ul>
+                        <input id='tarif-form-tarif' type='hidden' name='tarif' />
+                        <input type="hidden" name="type" value="tarif_form" />
+                    </form>
+                </div>
+            </div>
+            
             <section id="after-tarif-call-form">
                 <div class="call-form">
-
+                    <p class="to">до 31 января скидка 30%</p>
+                    <p class="timer"><b class="days">25</b> дней / <b class="hours">08</b> часов / <b class="minutes">10</b> минут / <b class="seconds">12</b> секунд</p>
+                    <p class="text">Закажите прямо сейчас свой уникальный сайт <span>с гарантией конверсии</span></p>
+                    <form action="send_mail.php" method="POST" class="form call_form">
+                        <input type="text" name="name" class="name" placeholder="Ваше имя"  required="required"/>  
+                        <input type="text" name="name" class="phone" placeholder="Ваш телефон"  required="required"/>  
+                        <input type="hidden" name="type" value="call_form" />
+                        <input type="submit" class="submit" value="Заказать звонок" /> 
+                    </form>
+                    <div class="call-form-thanks">
+                        <p>Спасибо за ваш интерес</p>
+                        Наш специалист свяжется с вами в течение 15 минут
+                    </div>
                 </div>
             </section>
             <section id="portfolio">
-                <div id="portfolio-header"></div>
-                <div id="portfoiio-examples"></div>
-                <div id="portfolio-form"></div>
+                <div id="portfolio-header">
+                    <h1>ПОРТФОЛИО</h1>
+                    <p>
+                        Убедитесь в том, что наши работы уникальны, как с точки зрения копирайтинга, так и в плане прототипирования и дизайна. 
+                        Мы всегда найдем необходимый подход, чтобы удовлетворить ваши бизнес-задачи и наш творческий потенциал.
+                    </p>
+                </div>
+                <div id="portfoiio-examples">
+                    <ul>
+                        <li data-toggle="modal" data-target="#portModal1" class="first">
+                            <h3>KAULA YOGA</h3>
+                            <p>Landing Page</p>
+                        </li>
+                        <li data-toggle="modal" data-target="#portModal2" class="second">
+                            <h3>KAULA YOGA</h3>
+                            <p>Long page</p>
+                        </li>
+                        <li data-toggle="modal" data-target="#portModal3" class="third">
+                            <h3>ARTSPECTR</h3>
+                            <p>Landing Page</p>
+                        </li>
+                    </ul>
+                    <div class="clr"></div>
+                </div>
+                <div id="portfolio-form">
+                    <div class="submit" id="show_portfoilio_form">Получить полное портфолио</div>
+                    <form action="send_mail.php" method="post" id="get_portfoilio_form" class="portfolio_form">
+                        <input type="email" name="email" placeholder="Ваш e-mail"  required="required"/>
+                        <input type="hidden" name="type" value="portfolio_form" />
+                        <input type="submit" class="submit" value="Получить"/>
+                    </form>
+                    <div class="portfolio-form-thanks" style="display: none;">
+                        <p>Спасибо за ваш интерес</p>
+                        Наш специалист свяжется с вами в течение 15 минут
+                    </div>
+                </div>
             </section>
             <section id="brif">
-
+                <div id="brif-img" class="pull-left"></div>
+                <div id="brif-text">
+                    <h1>ВЫ ГОТОВЫ <br>ЗАПОЛНИТЬ БРИФ?</h1>
+                    <p>
+                        Помните, что заполнение брифа - это первый кирпич
+                        вашего будущего проекта, поэтому  постарайтесь 
+                        отразить все свои пожелания и требования, чтобы 
+                        мы лучше понимали нашу общую цель.
+                    </p>
+                    <div id="brif-btns">
+                        <div class="submit" data-toggle="modal" data-target="#brief_modal" >Заполнить сейчас</div>
+                        <div class="submit pull-right" id="brif-req-btn">Получить по почте</div>
+                    </div>
+                    <div id="brif-req-form" style="display: none;">
+                        <form action="send_mail.php" method="post" id="get_brif_form" class="brif_req_form">
+                            <input type="email" name="email" placeholder="Ваш e-mail"  required="required"/>
+                            <input type="hidden" name="type" value="brif_req" />
+                            <input type="submit" class="submit" value="Получить"/>
+                        </form>
+                        <div class="brif-form-thanks">
+                            <p>Спасибо за ваш интерес</p>
+                            Наш специалист свяжется с вами в течение 15 минут
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
         <div id="footer">
-            <section id="footer-text">
-                
-            </section>
-            <section id="footer-form">
-                
+            <h1>
+                МЫ ВСЕГДА РАДЫ ОТВЕТИТЬ НА ВСЕ <br>
+                ВАШИ ВОПРОСЫ
+            </h1>
+            <p>
+                Оставьте заявку на обратный звонок и наш менеджер <br>
+                свяжется с вами в течении 15 минут
+            </p>
+            <section id="footer-form" class="call-form">
+                <form class="form call_form" action="send_mail.php" method="post"> 
+                    <input type="text" name="name" class="name" placeholder="Ваше имя" required="required"/>  
+                    <input type="text" name="phone" class="phone" placeholder="Ваш телефон"  required="required"/>
+                    <input type="hidden" name="type" value="call_form" />
+                    <input type="submit" class="submit" value="Заказать звонок" /> 
+                </form>
+                <div class="call-form-thanks">
+                    <p>Спасибо за ваш интерес</p>
+                    Наш специалист свяжется с вами в течение 15 минут
+                </div>
             </section>
             <section id="footer-logo">
-                
+                <a href="#header"></a>
             </section>
         </div>
+        
+<!-- MODALS -->
+        <div class="modal fade" id="portModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">KAULA YOGA</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="css/imgs/portfolio-ex1.jpg" />
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div class="modal fade" id="portModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">KAULA YOGA</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="css/imgs/portfolio-ex2.jpg" />
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div class="modal fade" id="portModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">ARTSPECTR</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="css/imgs/portfolio-ex3.jpg" />
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+<!--BRIEF MMODAL-->
+        <div class="modal fade" id="brief_modal" tabindex="-1" role="dialog" 
+             aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog"  style="width: 60%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Онлайн-бриф на создание сайта</h4>
+                    </div>
+                    <div class="modal-body" >
+                        <form action="send_mail.php" method="post" id="form_brief" class="form_brief form" enctype="multipart/form-data">
+                            <ul class="nav nav-pills">
+                                <li class="active"><a href="#step1" data-toggle="tab">Шаг 1. О компании</a></li>
+                                <li><a href="#step2" data-toggle="tab">Шаг 2. Дизайн</a></li>
+                                <li><a href="#step3" data-toggle="tab">Шаг 3. Функционал</a></li>
+                                <li><a href="#step4" data-toggle="tab">Шаг 4. Реквизиты заказчика</a></li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="step1">    
+                                    <fieldset>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="title_3">Название компании</label>
+                                                    <input type="text" name="step1-1" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="title_3">Описание услуг и товаров</label>
+                                                    <textarea name="step1-2" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="title_3">География деятельности</label>
+                                                    <input type="text" name="step1-3" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="title_3">Целевая аудитория</label>
+                                                    <input type="text" name="step1-4" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="title_3">Цели создания сайта</label>
+                                            <textarea name="step1-5" class="form-control" placeholder="Например, увеличить продажи за счет интернет-аудитории, рассказать о новом магазине, обспечить легкий доступ к документам для партнеров и др."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="title_3">Что должен сделать или почувствовать посетитель?</label>
+                                            <textarea name="step1-6" class="form-control" placeholder="Например, позвонить, заполнить форму заявки, посетить в офис или узнать о товаре, запомнить как качественный современный бренд и др."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="title_3">Адрес сайта</label>
+                                            <input type="text" name="step1-7" class="form-control" placeholder="adressaita.ru">
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="tab-pane" id="step2">                                        
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label class="title_3">Есть фирменный стиль?</label>
+                                            <input type="file" name="file1" class="form-control">
+                                        </div>	
+                                        <div class="form-group">
+                                            <label>Предпочтительные цвета</label>
+                                            <textarea name="step2-2" class="form-control"></textarea>
+                                        </div>
+                                        <div class="row">
+                                            <p>Пожелания к дизайну</p>
+                                            <div class="col-lg-6">
+                                                <ul class="form_list">
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_01_field_01">
+                                                                <input name="step2-3[]" type="checkbox" value="Строгий бизнес-стиль" id="group_01_field_01">
+                                                                Строгий бизнес-стиль
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_01_field_02">
+                                                                <input name="step2-3[]" type="checkbox" value="Компактный дизайн" id="group_01_field_02">
+                                                                Компактный дизайн
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_01_field_03_0">
+                                                                <input name="step2-3[]" type="checkbox" value="Насыщенный дизайн" id="group_01_field_03_0">
+                                                                Насыщенный дизайн
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_01_field_03">
+                                                                <input name="step2-3[]" type="checkbox" value="Минимализм" id="group_01_field_03">
+                                                                Минимализм
+                                                            </label>
+                                                        </div>                                                        
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_01_field_04">
+                                                                <input name="step2-3[]" type="checkbox" value="Больше графики, мало текста" id="group_01_field_04">
+                                                                Больше графики, мало текста
+                                                            </label>
+                                                        </div>                                                        
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_01_field_05">
+                                                                <input name="step2-3[]" type="checkbox" value="Больше текста, мало графики" id="group_01_field_05">
+                                                                Больше текста, мало графики
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_01_field_06">
+                                                                <input name="step2-3[]" type="checkbox" value="Анимационные эффекты" id="group_01_field_06">
+                                                                Анимационные эффекты
+                                                            </label>
+                                                        </div>                                                        
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label>Пожелания своими словами</label>
+                                                    <textarea name="step2-4" class="form-control"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Возможно, есть примеры?</label>
+                                                    <textarea name="step2-5" class="form-control" placeholder="Ссылки на сайты, которые вам нравятся"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="tab-pane" id="step3">                                        
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label>Есть техническое задание?</label>
+                                            <input type="file" name="file2" class="form-control">
+                                        </div>	
+                                        <div class="row">
+                                            <div class="group col-lg-5">
+                                                <p>Опишите структуру</p>
+                                                <ul class="form_list">
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_02_field_01">
+                                                                <input name="step3-2[]" type="checkbox" value="О компании (о нас, о студии и др.)" id="group_02_field_01">
+                                                                О компании (о нас, о студии и др.)
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_02_field_02">
+                                                                <input name="step3-2[]" type="checkbox" value="Услуги (товары, продукты и др.)" id="group_02_field_02">
+                                                                Услуги (товары, продукты и др.)
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_02_field_03_0">
+                                                                <input name="step3-2[]" type="checkbox" value="Каталог" id="group_02_field_03_0">  
+                                                                Каталог
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_02_field_03">
+                                                                <input name="step3-2[]" type="checkbox" value="Спецпредложения (акции)" id="group_02_field_03">
+                                                                Спецпредложения (акции)
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_02_field_04">
+                                                                <input name="step3-2[]" type="checkbox" value="Отзывы" id="group_02_field_04">
+                                                                Отзывы
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_02_field_05">
+                                                                <input name="step3-2[]" type="checkbox" value="Новости (статьи)" id="group_02_field_05">
+                                                                Новости (статьи)
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_02_field_06">
+                                                                <input name="step3-2[]" type="checkbox" value="Блог" id="group_02_field_06">
+                                                                Блог
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_02_field_08">
+                                                                <input name="step3-2[]" type="checkbox" value="Вакансии" id="group_02_field_08">
+                                                                Вакансии
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox">
+                                                            <label for="group_02_field_07">
+                                                                <input name="step3-2[]" type="checkbox" value="Контакты (реквизиты, карта проезда)" id="group_02_field_07">
+                                                                Контакты (реквизиты, карта проезда)
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-7">
+                                                <div class="form-group">
+                                                    <label>Комментарии к структуре</label>
+                                                    <textarea name="step3-3" class="form-control"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="title_3">Возможно, есть сайты с желаемой структурой?</label>
+                                                    <input type="text" name="step3-4" class="form-control" placeholder="ссылки на сайты, структура которых вам подходит">
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="checkbox">
+                                                        <label for="group_03_field_01">
+                                                            <input type="checkbox" name="step3-5" value="Да" id="group_03_field_01" />
+                                                            Возможность самостоятельного заполнения сайта через систему управления
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="tab-pane" id="step4">                                        
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label class="title_3">Прикрепите файл с вашими реквизитами для составления договора</label>
+                                            <input type="file" name="file3" class="form-control">
+                                        </div>	
+                                        <div class="form-group">
+                                            <label class="title_3">Или впишите реквизиты заказчика сюда </label>
+                                            <textarea name="step4-2" class="form-control" placeholder="Наименование юр.лица, БИК банка, р/с, КПП, ИНН и др."></textarea>
+                                            <ul class="form_list">
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <label for="group_04_field_01">
+                                                            <input type="checkbox" name="step4-3" value="Да" id="group_04_field_01">
+                                                            Мне удобен наличный расчет
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="title_3">Имя контактного лица</label>
+                                                    <input type="text" class="form-control" name="step4-4" required="required">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="title_3">Когда вам удобно приехать для обсуждения проекта?</label>
+                                                    <input type="text" name="step4-7" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="title_3">Телефон</label>
+                                                    <input type="text" name="step4-5" class="form-control" required="required" placeholder="В формате +7 (987) 123-45-67">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="title_3">E-mail</label>
+                                                    <input type="email" class="form-control" name="step4-6" required="required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="type" value="brief_form" />
+                                        <input type="submit" class="submit" value="Отправить бриф"/>
+                                        <blockquote class="pull-right">
+                                            <p>Бриф готов к отправке. Это будет прекрасный сайт!</p>
+                                            <small>После отправки брифа мы свяжемся с вами в течение рабочего дня.</small>
+                                        </blockquote>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="success-brif" style='display: none;'>
+                            <div class="title_4">Спасибо! Бриф отправлен.</div>
+                            <p>Мы свяжемся с вами в течение рабочего дня.</p>
+                            <small>Окно закроется автоматически после загрузки файлов.</small>
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <script src="js/main.js" type="text/javascript"></script>
     </body>
 </html>
 
