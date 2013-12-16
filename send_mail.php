@@ -68,13 +68,12 @@ switch ( $post['type'] ) {
         echo json_encode($res);
         break;
     case 'brif_req':
-        $name = $post['name'];
         $email = $post['email'];
         
         $subject = 'Champin - Запрос на бриф!';
-        $message = "<h2>Пользователь $name - $email запросил бриф на разработку.</h2>";
+        $message = "<h2>Пользователь $email запросил бриф на разработку.</h2>";
         
-        $message_user = "<h2>Приветствуем, $name!</h2>
+        $message_user = "<h2>Приветствуем!</h2>
                 <p>Мы очень рады, что вы приняли решение заполнить наш <a href=\"http://champin12.com/brif.doc\">бриф</a>.
                    Готовый бриф вы можете отправить в ответном письме,
                    и мы свяжемся с вами для обсуждения деталей.</p>
